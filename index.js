@@ -4,11 +4,15 @@ const inputButton=document.getElementById("input-btn")
 const ulEl= document.getElementById("ul-el")
 
 
-
-inputButton.addEventListener("click",function(){
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+console.log(leadsFromLocalStorage)
+inputButton.addEventListener("click",function(    ){
     myLeads.push(inputEl.value)
     inputEl.value=""
+    localStorage.setItem("myLeads",JSON.stringify(myLeads))
+    //myLeads=JSON.stringify(myLeads)
     renderLeads()
+    console.log(localStorage.getItem("myLeads"))
     
 })
 function renderLeads(){
@@ -17,7 +21,9 @@ function renderLeads(){
 
         listItem+= `
         <li>
-           <a href='"+myLeads[i]+"' target='_blank'>"+ myLeads[i]+ "</a>
+           <a href='${myLeads[i]}' target='_blank'>
+           ${myLeads[i]}
+           </a>
         </li>
         `
     }
