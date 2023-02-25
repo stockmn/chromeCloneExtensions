@@ -3,7 +3,7 @@ const inputEl = document.getElementById("input-el")
 const inputButton=document.getElementById("input-btn")
 const ulEl= document.getElementById("ul-el")
 const deleteBtn=document.getElementById("delete-btn")
-const saveBtn=document.querySelector("#save-btn")
+const saveBtn=document.getElementById('save-btn')
 
 
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
