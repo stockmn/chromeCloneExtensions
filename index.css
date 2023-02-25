@@ -16,7 +16,7 @@ input{
 
 }
 button{
-    background: rgb(10, 95, 30);
+    background: #5f9341;
     color: white;
     padding-left: 10px;
     padding-right: 10px;
@@ -24,8 +24,14 @@ button{
     padding-bottom: 10px;
     margin-top: 4px;
     font-weight: bold;
+    border: 1px solid #5f9341;
     
 
+}
+#delete-btn{
+    background: white;
+    color:#5f9341;
+    margin-left:  1px;
 }
 ul{
     margin-top: 20px;
